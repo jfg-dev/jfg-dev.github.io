@@ -7,8 +7,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
 </head>
 <body>
-    <h2>INTRODUSE EL CODIGO</h2>
-    <input type="password" id="password" placeholder="Ingrese la contraseña">
+    <h2>INTRODUSE EL CÓDIGO SECRETO</h2>
+    <input type="text" id="password" placeholder="Ingrese la contraseña">
     <button onclick="checkPassword()">Enviar</button>
     <div id="qr-container" style="display: none;">
         <h2>TE INVITO A UNA COSA SUPE CHULA SI ACIERTAS</h2>
@@ -18,7 +18,8 @@
     <script>
         function checkPassword() {
             var password = document.getElementById('password').value;
-            if (password === 'rukalsMañanaInTheNightHasCome1311') {
+            if (password === 'rukalsMañanaInTheNightHasComeSanValientes') {
+                document.body.style.backgroundColor = '#FFC0CB';
                 document.getElementById('qr-container').style.display = 'block';
                 var qr = new QRious({
                     element: document.getElementById('qr-code'),
