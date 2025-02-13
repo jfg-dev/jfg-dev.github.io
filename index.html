@@ -3,18 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ñimikis</title>
+    <title>SOPRESIKIS</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
 </head>
 <body>
-    <h2>Escanea el código QR para ir a Instagram</h2>
-    <canvas id="qr-code"></canvas>
+    <h2>INTRODUSE EL CODIGO</h2>
+    <input type="password" id="password" placeholder="Ingrese la contraseña">
+    <button onclick="checkPassword()">Enviar</button>
+    <div id="qr-container" style="display: none;">
+        <h2>TE INVITO A UNA COSA SUPE CHULA SI ACIERTAS</h2>
+        <canvas id="qr-code"></canvas>
+    </div>
+    
     <script>
-        var qr = new QRious({
-            element: document.getElementById('qr-code'),
-            value: 'https://www.instagram.com/p/DF5U8SINAlW/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==',
-            size: 200
-        });
+        function checkPassword() {
+            var password = document.getElementById('password').value;
+            if (password === 'rukalsMañanaInTheNightHasCome1311') {
+                document.getElementById('qr-container').style.display = 'block';
+                var qr = new QRious({
+                    element: document.getElementById('qr-code'),
+                    value: 'https://www.instagram.com/p/DF5U8SINAlW/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==',
+                    size: 200
+                });
+            } else {
+                alert('Contraseña incorrecta');
+            }
+        }
     </script>
 </body>
 </html>
